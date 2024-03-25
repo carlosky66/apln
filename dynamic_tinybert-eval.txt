@@ -1,0 +1,16 @@
+Using data from /home/carlos/.cache/nlgeval
+In case of broken downloads, remove the directory and run setup again.
+SPICE evaluation took: 3.511 s
+Bleu_1: 0.329427
+Bleu_2: 0.294795
+Bleu_3: 0.269191
+Bleu_4: 0.241695
+METEOR: 0.205671
+ROUGE_L: 0.359961
+CIDEr: 1.605459
+SPICE: 0.277005
+SkipThoughtsCosineSimilarity: 0.618084
+EmbeddingAverageCosineSimilarity: 0.667222
+EmbeddingAverageCosineSimilairty: 0.667222
+VectorExtremaCosineSimilarity: 0.589073
+GreedyMatchingScore: 0.767100
