@@ -73,12 +73,12 @@ squad_ds = load_dataset(path='squad_v2', name='squad_v2', split='train')
 
 documents = list(dict.fromkeys(squad_ds['context'])) # Eliminamos duplicados
 
-# embeddings = get_embeddings(documents)
+embeddings = get_embeddings(documents)
 
-# # Crea el índice FAISS con los embeddings
-# index = create_faiss_index(embeddings)
+# Crea el índice FAISS con los embeddings
+index = create_faiss_index(embeddings)
 
-# faiss.write_index(index,'squad.index')
+faiss.write_index(index,'squad.index')
 
 index = faiss.read_index("squad.index")
 
@@ -112,9 +112,6 @@ contexts = []
 
 contador = 0
 for model in models:
-  if contador == 0:
-    contador += 1
-    continue
   question_answerer = pipeline("question-answering", model=model)
   filename = 'hyp_' + str(contador) + '.txt' # Guardar las respuesta de cada modelo en un fichero diferente
   with open(filename, 'w') as f:
